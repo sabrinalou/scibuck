@@ -1,0 +1,65 @@
+.note {
+    background: #f4f2e5;
+    backdrop-filter: blur(5px);
+    box-shadow: -6px -4px 2pxc 13px rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    border: 1.5px solid #5f3711;
+    color: #5f3711;
+    padding: 15px;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    word-wrap: break-word;
+}
+
+.note__body {
+    white-space: pre-wrap;
+    font-family: 'Comic Neue';
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 200%;
+    letter-spacing: 4px;
+    padding: 0 25px;
+}
+
+.note textarea {
+    white-space: pre-wrap;
+    background: transparent;
+    border: none;
+    color: #5f3711;
+    resize: none;
+    font-size: 18px;
+}
+.note textarea:focus {
+    outline: none;
+}
+.note textarea::placeholder {
+    color: rgb(196, 175, 175);
+    font-family: 'Poppins', 'sans-serif';
+}
+
+.note__save {
+    background: #5f3711;
+    transition: 0.1s ease-in-out;
+    border: 1.5px solid #5f3711;
+    border-radius: 10px;
+    color: #f4f2e5;
+    padding: 4px 10px;
+    font-size: 13px;
+    cursor: pointer;
+}
+.note__save:hover {
+    background: #fff;
+    border: 1.5px solid #5f3711;
+    color: #4b1589;
+}
+.note__delete {
+    cursor: pointer;
+}
+.note__delete:hover {
+    transform: scale(1.1);
+}
+.char__progress {
+    background-color: #fff!important;
+}
