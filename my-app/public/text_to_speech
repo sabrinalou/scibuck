@@ -1,0 +1,5 @@
+import pyttsx3
+voice = pyttsx3.init()
+text=str(input("Enter the piece of text: "))
+voice.say(text)
+voice.runAndWait()
