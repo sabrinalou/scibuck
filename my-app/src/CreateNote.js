@@ -3,11 +3,10 @@ function CreateNote({ textHandler, saveHandler, inputText }) {
 
     //character limit
     const charLimit = 3000;
-    const charLeft = charLimit - inputText.length;
 
   return (
     <div className="note" style={{ background: "rgba(255, 255, 255, 0)" }}>
-      <textarea
+      <textarea className="text-area"
         cols="10"
         rows="5"
         value={inputText}
@@ -16,7 +15,7 @@ function CreateNote({ textHandler, saveHandler, inputText }) {
         maxLength="3000"
       ></textarea>
       <div className="note__footer">
-      <span className="label">{charLeft} characters left  </span>
+      <span className="label">  </span>
         <button className="note__save" onClick={saveHandler} >Convert</button>
       </div>
     </div>

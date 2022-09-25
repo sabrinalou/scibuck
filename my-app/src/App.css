@@ -31,6 +31,11 @@ body {
     grid-gap: 1rem;
     grid-template-columns: repeat(1, minmax(900px, 1fr));
 }
+
+.text-area {
+    white-space: pre-wrap;
+}
+
 @media screen and (max-width: 900px) {
     .notes {
         grid-template-columns: repeat(2, minmax(300px, 1fr));

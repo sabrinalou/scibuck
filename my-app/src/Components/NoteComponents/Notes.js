@@ -26,6 +26,8 @@ function Notes() {
         ]);
         //clear the textarea
         setInputText("");
+        console.log(uuid);
+            console.log(inputText);
     };
   
     //delete note function
@@ -52,7 +54,8 @@ function Notes() {
       <CreateNote
         textHandler={textHandler}
         saveHandler={saveHandler}
-        inputText={inputText}/>
+        inputText={inputText}
+        />
 
     {notes.map((note) => (
       <Note 
@@ -60,7 +63,7 @@ function Notes() {
         id={note.id}
         text={note.text}
         deleteNote={deleteNote}
-        lines={note.numberofLines}
+
       />
     ))}
     </div>
