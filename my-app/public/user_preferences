@@ -1,0 +1,40 @@
+import mysql.connector
+
+conn = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="Ashu3690",
+    database="gist")
+
+'''
+mycursor = conn.cursor()
+q1 = "show tables"
+mycursor.execute(q1)
+results = mycursor.fetchall()
+print (results[0][0])
+'''
+
+mycursor = conn.cursor()
+q1 = "use gist"
+mycursor.execute(q1)
+
+
+name = str(input("Enter a name: "))
+print (" ")
+print ("PREFERENCES (Y/N)")
+print (" ")
+line_space = input("Line spacing: ")
+letter_space = input("Letter spacing: ")
+bold_italic = input("Remove bolding and italics: ")
+headings = input("remove headings: ")
+capital = input("Convert all to lowercase: ")
+
+q2 = "insert into USER_PREFERENCES values('{}','{}','{}','{}','{}','{}')".format(name,line_space,letter_space,bold_italic,headings,capital)
+mycursor.execute(q2)
+conn.commit()
+
+
+q3 = "select * from USER_PREFERENCES"
+mycursor.execute(q3)
+results = mycursor.fetchall()
+print (results)
