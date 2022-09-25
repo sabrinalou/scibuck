@@ -1,49 +1,23 @@
-import {useState} from 'react';
-import './App.css';
-
+import { React } from "react";
+import "./App.css";
+import Notes from "./Components/NoteComponents/Notes";
+import CreateNote from "./CreateNote";
 function App() {
-
-  const [isShown, setIsShown] = useState(false);
-
-  const handleClick = event => {
-    // 👇️ toggle shown state
-    setIsShown(true);
-  };
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <div>
-          <form>
-          <label for="fname">Paste paragraphs here: </label>
-
-            <input type="text"></input>
-            <br></br>
-            <button onClick={handleClick} type="submit">Convert</button>
-          </form>
-
-          {/* show elements on click */}
-{/*}            {isShown && (
-              <div>
-                <p>content shown here</p>
-              </div>
-)} */}
-
-            {/* show component on click */}
-            {isShown && <gistOutput />}
-            
-          </div>
-      </header>
+    <div className="main">
+      <Notes></Notes>
     </div>
   );
 }
-
-function gistOutput() {
-  return (
-    <div>
-      <p>Content</p>
-    </div>
-  )
-}
-
 export default App;
+
+{ /* <div>
+<form>
+<label for="fname">Paste paragraphs here: </label>
+
+  <input type="text"></input>
+  <br></br>
+  <button onClick={handleClick} type="submit">Convert</button>
+</form>
+  
+</div> */}
